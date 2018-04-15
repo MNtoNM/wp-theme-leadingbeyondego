@@ -1,0 +1,11 @@
+// @function clipTop($top-left) {
+//   @return $top-left
+// }
+//
+@function clipBottom($bottom-right) {
+  @return (0 0, 100% 0, 100%  $bottom-right, 0% 100%)
+}
+
+@function clipTop($top-left) {
+  @return (0 $top-left, 100% 0, 100% 100%, 0% 100%)
+}

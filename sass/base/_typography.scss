@@ -1,0 +1,95 @@
+ @font-face {
+    font-family: 'optima';
+    src: url('http://lbewp.local/wp-content/themes/leadingbeyondego/fonts/optima-bold.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+h1 {
+  font-size: 7.2rem;
+  color: $color-primary;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3.8rem;
+  color: $color-text;
+  padding-bottom: 0.5em;
+  font-family: $default-font-family;
+
+}
+
+h3, section-1__pullquote {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 100;
+  color: $color-white;
+  font-family: $default-font-family;
+  // @include absCenter;
+  padding-top: 11rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  color: $color-text;
+  font-family: $default-font-family;
+
+
+}
+
+h5 {
+  font-weight: normal;
+  font-size: 2.4rem;
+  color: $color-text;
+  font-family: $default-font-family;
+
+}
+
+h6 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: $color-text;
+
+}
+
+p, li {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  color: #042b2d;
+  word-spacing: 0.2em;
+}
+
+li {
+  list-style-type: circle;
+}
+
+.copy-block__inner li {
+  margin-left: 3rem;
+}
+
+.white {
+  color: $color-white;
+}
+
+.center {
+  text-align: center;
+}
+
+.copy-block {
+  &__outer {
+    transform: translateX(5%);
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  &__inner {
+    text-align: left;
+  }
+}

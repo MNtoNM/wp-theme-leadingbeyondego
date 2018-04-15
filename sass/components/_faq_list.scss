@@ -1,0 +1,83 @@
+/* Acordeon styles */
+
+.faq-accordion {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1.2em;
+  background: $color-faq-background;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  font-family: $default-font-family;
+  font-size: 2rem;
+}
+.blue label {
+  background: $color-primary; // question background
+  &:hover {
+    background-color: $color-faq-label-hover;
+  }
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: $color-faq-background;
+  -webkit-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+.blue .tab-content {
+  background: $color-faq-background;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 60rem;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}

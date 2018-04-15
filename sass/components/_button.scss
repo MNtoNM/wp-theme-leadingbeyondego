@@ -1,0 +1,15 @@
+.button {
+  color: $color-white;
+  border-radius: 3px;
+  padding: 1rem;
+  border: 1px solid $color-black;
+  background-color: $color-primary;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-family: $default-font-family !important;
+  display: block;
+
+  &:hover {
+    background-color: $color-accent;
+  }
+}

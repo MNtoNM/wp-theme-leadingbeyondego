@@ -1,0 +1,26 @@
+.footer {
+  background-color: $color-primary;
+  font-family: 'optima', serif;
+  // position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  bottom: 0;
+  height: 65px;
+  width: calc(100% - 6.2rem);
+  max-width: 150rem;
+  z-index: 10;
+  width: 100vw;
+  overflow: hidden;
+  color: $color-white;
+  font-size: 2rem;
+  padding-top: 2rem;
+
+  & a {
+    text-decoration: none;
+    color: $color-white;
+
+    &:hover {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+}

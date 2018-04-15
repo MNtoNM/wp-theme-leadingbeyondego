@@ -1,0 +1,47 @@
+.u-center-text { text-align: center !important; }
+
+.u-padding-bottom-massive { padding-bottom: 50rem !important; }
+.u-padding-top-big { padding-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+.u-margin-bottom-small { margin-bottom: 1.5rem !important; }
+
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+  color: blue;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+// When user is logged in, wp admin bar should not cover site header:
+.admin-bar .header {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .header {
+    top: 32px;
+  }
+}
+
+
+.parallax-window-min-30 {
+	min-height: 30rem;
+	background: transparent;
+  width: 100%;
+}
+
+.parallax-window-min-40 {
+	min-height: 40rem;
+	background: transparent;
+  width: 100%;
+}

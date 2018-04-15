@@ -1,0 +1,17 @@
+.rule-horizontal {
+  content: '';
+  background-color: $color-secondary;
+  height: 30px;
+  width: 100%;
+  z-index: 100;
+}
+
+.rule-angled {
+  content: '';
+  background-color: $color-secondary;
+  height: 30px;
+  width: 100%;
+  z-index: 1;
+  transform: rotate(-3deg);
+  overflow: hidden;
+}

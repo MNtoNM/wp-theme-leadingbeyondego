@@ -1,0 +1,49 @@
+.header {
+  background-color: $color-primary;
+  font-family: 'optima', serif;
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  top: 0;
+  height: 130px;
+  width: calc(100% - 6.2rem);
+  max-width: 150rem;
+  -webkit-clip-path: polygon(clipBottom(66%));
+  clip-path: polygon(clipBottom(66%));
+  z-index: 10;
+  width: 100vw;
+  overflow: hidden;
+  // margin: 0 auto;
+
+  &__logo {
+    color: $color-white;
+    font-size: 4.8rem;
+    font-weight: 700;
+    position: absolute;
+    left: 3.7rem;
+    top: 2.6rem;
+
+  }
+  &__enroll {
+    color: $color-white;
+    border: 2px solid $color-white;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+    position: relative;
+    top: 2rem;
+    right: 3rem;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $color-accent;
+      cursor: pointer;
+    }
+  }
+}
+
+h1 {
+  color: $color-primary;
+  font-size: 8rem;
+
+}

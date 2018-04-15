@@ -1,0 +1,466 @@
+/*
+  Theme Name: Leading Beyond Ego
+  Theme URI: https://www.leadingbeyondego.com
+  Author: Leading Beyond Ego, LLC
+  Version: 1.0
+*/
+/*
+0 - 600px:   Phone
+600 - 900px: Tablet
+900 - 1200px: Tablet
+1200 - 1800: Where our normal styles apply.
+1800px+:      Big Desktop
+
+Breakpoint Argument Choices:
+- Phone
+- tab-port (tablet portrait)
+- tab-land (tablet landscape)
+- big-desktop
+
+Good order to follow when making a site responsive:
+ORDER: Base + typography > general layout (header, footer, etc), + grid > page layout > components
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  padding-top: 0;
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  /* All elements will inherit this via universal selector (asterisk) above. */
+  background-color: #f2f2f2;
+  font-size: 1.6rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+@font-face {
+  font-family: 'optima';
+  src: url("http://lbewp.local/wp-content/themes/leadingbeyondego/fonts/optima-bold.ttf") format("truetype"); }
+
+h1 {
+  font-size: 7.2rem;
+  color: #2AA0A6;
+  text-align: center; }
+
+h2 {
+  font-weight: bold;
+  font-size: 3.8rem;
+  color: #042B2D;
+  padding-bottom: 0.5em;
+  font-family: "optima", serif; }
+
+h3, section-1__pullquote {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 100;
+  color: #fff;
+  font-family: "optima", serif;
+  padding-top: 11rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  line-height: 1.4; }
+
+h4 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  color: #042B2D;
+  font-family: "optima", serif; }
+
+h5 {
+  font-weight: normal;
+  font-size: 2.4rem;
+  color: #042B2D;
+  font-family: "optima", serif; }
+
+h6 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: #042B2D; }
+
+p, li {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  color: #042b2d;
+  word-spacing: 0.2em; }
+
+li {
+  list-style-type: circle; }
+
+.copy-block__inner li {
+  margin-left: 3rem; }
+
+.white {
+  color: #fff; }
+
+.center {
+  text-align: center; }
+
+.copy-block__outer {
+  transform: translateX(5%);
+  max-width: 70rem;
+  margin: 0 auto; }
+
+.copy-block__inner {
+  text-align: left; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-padding-bottom-massive {
+  padding-bottom: 50rem !important; }
+
+.u-padding-top-big {
+  padding-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+  color: blue; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.admin-bar .header {
+  top: 46px; }
+
+@media screen and (min-width: 783px) {
+  .admin-bar .header {
+    top: 32px; } }
+
+.parallax-window-min-30 {
+  min-height: 30rem;
+  background: transparent;
+  width: 100%; }
+
+.parallax-window-min-40 {
+  min-height: 40rem;
+  background: transparent;
+  width: 100%; }
+
+.button {
+  color: #fff;
+  border-radius: 3px;
+  padding: 1rem;
+  border: 1px solid #000;
+  background-color: #2AA0A6;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-family: "optima", serif !important;
+  display: block; }
+  .button:hover {
+    background-color: #FBA542; }
+
+/* Acordeon styles */
+.faq-accordion {
+  width: 75%;
+  margin: 0 auto; }
+
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden; }
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1; }
+
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1.2em;
+  background: #EDEAD6;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  font-family: "optima", serif;
+  font-size: 2rem; }
+
+.blue label {
+  background: #2AA0A6; }
+  .blue label:hover {
+    background-color: #0F7075; }
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #EDEAD6;
+  -webkit-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  margin: 0 auto;
+  padding: 0 10%; }
+
+.blue .tab-content {
+  background: #EDEAD6; }
+
+.tab-content p {
+  margin: 1em; }
+
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 60rem; }
+
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s; }
+
+input[type=checkbox] + label::after {
+  content: "+"; }
+
+input[type=radio] + label::after {
+  content: "\25BC"; }
+
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg); }
+
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg); }
+
+.rule-horizontal {
+  content: '';
+  background-color: #9DAE84;
+  height: 30px;
+  width: 100%;
+  z-index: 100; }
+
+.rule-angled {
+  content: '';
+  background-color: #9DAE84;
+  height: 30px;
+  width: 100%;
+  z-index: 1;
+  transform: rotate(-3deg);
+  overflow: hidden; }
+
+.container {
+  max-width: 150rem; }
+
+#section-1 {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 97.5%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 97.5%, 0% 100%);
+  color: #fff;
+  width: 100%;
+  height: 750px;
+  margin-top: 2rem;
+  position: relative;
+  max-width: 150rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/space_sunrise.jpg");
+  background-size: cover;
+  margin: 0 auto; }
+
+#section-2 {
+  color: #042B2D;
+  background: url("images/backgrounds/grunge_wall.png");
+  z-index: -1;
+  clip-path: polygon(0 6.5%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 6.5%, 100% 0, 100% 100%, 0% 100%);
+  margin-top: -30rem;
+  max-width: 150rem; }
+
+#section-3 {
+  color: #042B2D;
+  background: url("images/backgrounds/grunge_wall.png");
+  max-width: 150rem; }
+
+#section-4 {
+  color: #042B2D;
+  background-color: #fff;
+  max-width: 150rem; }
+
+#section-5 {
+  color: #042B2D;
+  background: url("images/backgrounds/asanoha-400px.png");
+  max-width: 150rem; }
+
+#section-6 {
+  background-color: #fff; }
+
+#section-7 {
+  color: #042B2D;
+  background: url("images/backgrounds/light_alu.png");
+  max-width: 150rem; }
+
+#section-8, #section-9 {
+  color: #042B2D;
+  background: url("images/backgrounds/soft_wallpaper.png");
+  max-width: 150rem; }
+
+#section-10 {
+  background: url("images/backgrounds/light_alu.png");
+  color: #042B2D;
+  max-width: 150rem; }
+
+#section-12 {
+  color: #042B2D;
+  background: url("images/backgrounds/escheresque.png");
+  max-width: 150rem; }
+
+#section-13 {
+  color: #042B2D;
+  background: url("images/backgrounds/soft_wallpaper.png");
+  max-width: 150rem; }
+
+#section-14 {
+  color: #042B2D;
+  background: url("images/backgrounds/soft_wallpaper.png"); }
+
+#section-15 {
+  color: #042B2D;
+  background-color: #fff;
+  max-width: 150rem; }
+
+#section-16 {
+  color: #042B2D;
+  background: url("images/backgrounds/grunge_wall.png");
+  max-width: 150rem; }
+
+.footer {
+  background-color: #2AA0A6;
+  font-family: 'optima', serif;
+  -webkit-transform: translate3d(0, 0, 0);
+  bottom: 0;
+  height: 65px;
+  width: calc(100% - 6.2rem);
+  max-width: 150rem;
+  z-index: 10;
+  width: 100vw;
+  overflow: hidden;
+  color: #fff;
+  font-size: 2rem;
+  padding-top: 2rem; }
+  .footer a {
+    text-decoration: none;
+    color: #fff; }
+    .footer a:hover {
+      color: #FBA542;
+      text-decoration: none; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 6rem * 2) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 6rem * 3) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) +  2 * 6rem); }
+
+.header {
+  background-color: #2AA0A6;
+  font-family: 'optima', serif;
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  top: 0;
+  height: 130px;
+  width: calc(100% - 6.2rem);
+  max-width: 150rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+  z-index: 10;
+  width: 100vw;
+  overflow: hidden; }
+  .header__logo {
+    color: #fff;
+    font-size: 4.8rem;
+    font-weight: 700;
+    position: absolute;
+    left: 3.7rem;
+    top: 2.6rem; }
+  .header__enroll {
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 10px;
+    float: right;
+    position: relative;
+    top: 2rem;
+    right: 3rem;
+    border-radius: 2px; }
+    .header__enroll:hover {
+      background-color: #FBA542;
+      cursor: pointer; }
+
+h1 {
+  color: #2AA0A6;
+  font-size: 8rem; }
+
+.container {
+  width: 95vw;
+  margin: 0 auto; }

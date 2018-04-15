@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  padding-top: 0;
+  // overflow: hidden; // for parallax. Remove from html element, add to body element
+  font-size: 62.5%; // This defines that 1rem = 10px
+
+  @include respond(tab-land) { // Is width < 900px?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%;
+  }
+  @include respond(tab-port) { // Is width < 600px?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px 12/16 = 75%;
+  }
+
+}
+body {
+  height: 100vh; // required for scrolling with parallax
+  overflow-y: auto; // Note that we removed overflow from html element
+  // overflow-x: hidden; // No side-scrolling
+  // -webkit-overflow-scrolling: touch; // for ios devices
+  box-sizing: border-box; /* All elements will inherit this via universal selector (asterisk) above. */
+  // padding: 0 3rem 3rem 3rem;
+  background-color: $color-gray;
+  font-size: $default-font-size;
+
+  // -webkit-perspective: 1px;
+  // perspective: 1px;
+
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
