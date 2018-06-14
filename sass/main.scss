@@ -2,7 +2,7 @@
   Theme Name: Leading Beyond Ego
   Theme URI: https://www.leadingbeyondego.com
   Author: Leading Beyond Ego, LLC
-  Version: 1.0
+  Version: 1.0.2
 */
 @import "abstracts/functions";
 @import "abstracts/mixins";
@@ -16,6 +16,8 @@
 @import "components/button";
 @import "components/faq_list";
 @import "components/horizontal-rules";
+@import "components/images";
+@import "components/modal";
 @import "components/sections";
 
 @import "layout/footer";

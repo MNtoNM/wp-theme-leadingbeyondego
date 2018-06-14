@@ -8,6 +8,42 @@
   font-size: 3rem;
   font-family: $default-font-family !important;
   display: block;
+  text-decoration: none;
+  @include animate( all, 320ms );
+
+  &:hover {
+    background-color: $color-accent;
+  }
+}
+
+.button-dark {
+  padding: 2rem 2.5rem;
+  border: 1px solid $color-text;
+  background-color: $color-primary;
+  margin: 0 auto;
+  font-family: $default-font-family !important;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  // bottom: 10px;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+
+  &:hover {
+    background-color: $color-accent;
+  }
+}
+
+.button-light {
+  border: 1px solid $color-white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  margin: 0 auto;
+  font-family: $default-font-family !important;
+  display: inline-block;
+   text-transform: uppercase;
 
   &:hover {
     background-color: $color-accent;

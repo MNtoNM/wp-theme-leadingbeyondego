@@ -12,7 +12,8 @@
   z-index: 10;
   width: 100vw;
   overflow: hidden;
-  // margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
 
   &__logo {
     color: $color-white;
@@ -34,16 +35,40 @@
     top: 2rem;
     right: 3rem;
     border-radius: 2px;
+    text-decoration: none;
+    @include respond(phone) {
+      display: none;
+      // color: orangered !important;
+    }
 
     &:hover {
       background-color: $color-accent;
-      cursor: pointer;
+      // cursor: pointer;
     }
   }
 }
 
+
 h1 {
   color: $color-primary;
   font-size: 8rem;
-
 }
+
+#nav-enroll {
+  @include respond(phone) {
+    // display:none;
+  }
+}
+
+
+// ---- Modal Styles --- //
+// .navigation__checkbox {
+//   position: absolute;
+//   left: -9999px;
+//
+//   &:checked + label {
+//     background-color: orangered;
+//     width: 100vw;
+//     height: 100vh;
+//   }
+// }

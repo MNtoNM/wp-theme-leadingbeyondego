@@ -1,8 +1,10 @@
 <?php get_header(); ?>
+<div class="u-margin-bottom-medium"></div>
 <div class="container">
   <div id="section-1">
     <h3 class="section-1__pullquote">
       <div class="u-margin-bottom-medium"></div>
+
 
       The human ego is not equipped<br />
       for the challenges of our time.<br />
@@ -16,7 +18,9 @@
       <h5 class="center white">Registration is now closed. </h5>
       <div class="u-margin-bottom-medium"></div>
       <img src="<?php echo $result['image']; ?>"/>
-      <button class="button">Learn More</button>
+
+      <a href="#learn-more" class="button button-light" id="nav-enroll">Learn More</a>
+
     </div>
   </div>
   <div class="u-padding-top-big"></div>
@@ -33,6 +37,7 @@
       <div class="copy-block__inner">
         <h2><?php echo $result['headline'];?></h2>
         <p><?php echo $result['content'] ;?></p>
+        <div class="u-padding-top-big"></div>
       </div>
     </div>
   </div>
@@ -70,7 +75,8 @@
       </div>
 
       <div class="col-1-of-2">
-        <img style="width: 40vw;" alt="Colleagues conferring" src="<?php echo wp_get_attachment_image_src('171', 'full')[0] ?>" />
+        <img class="office-folks" alt="Colleagues conferring" src="<?php echo wp_get_attachment_image_src('171', 'full')[0] ?>" />
+        <div class="u-margin-bottom-big"></div>
       </div>
     </div>
   </div>
@@ -94,10 +100,8 @@
   <div id="section-6">
     <div class="u-padding-top-big"></div>
 
-
-
     <!-- Who is this course for? -->
-    <div class="u-padding-top-big"></div>
+    <div class="u-margin-bottom-medium"></div>
     <?php $result = getSalescopy(49); ?>
     <div class="copy-block__outer">
       <div class="copy-block__inner">
@@ -110,8 +114,6 @@
 
 <!-- Parallax: fistbump -->
 <div class="parallax-window-min-40" data-parallax="scroll" data-image-src="<?php echo wp_get_attachment_image_src('173', 'full')[0] ?>" data-speed="0.5"></div>
-
-
 
   <div id="section-7">
     <div class="u-padding-top-big"></div>
@@ -144,11 +146,11 @@
 
 <div id="section-9">
   <div class="row">
-    <div class="col-1-of-3">
-      <img style="width: 25vw;" alt="Woman in office attire" src="<?php echo wp_get_attachment_image_src('175', 'full')[0] ?>" />
+    <div class="col-1-of-2">
+      <img class="office-folks" alt="Woman in office attire" src="<?php echo wp_get_attachment_image_src('175', 'full')[0] ?>" />
     </div>
 
-    <div class="col-2-of-3">
+    <div class="col-1-of-2">
       <!-- You're leading beyond ego when... -->
       <?php $result = getSalescopy(55); ?>
       <div class="copy-block__outer">
@@ -174,16 +176,22 @@
     <div class="copy-block__inner">
       <h1><?php echo $result['headline'];?></h1>
       <div class="u-margin-bottom-medium"></div>
-      <p> class="center"><?php echo $result['content'] ;?></p>
-      <div class="u-margin-bottom-small"></div>
+      <p class="center"><?php echo $result['content'] ;?></p>
+      <div class="u-margin-bottom-medium"></div>
 
       <h4 class="center">Registration is currently closed.</h4>
-      <div class="u-margin-bottom-small"></div>
+      <div class="u-margin-bottom-medium"></div>
 
-      <button class="button">Learn More</button>
+      <a href="#learn-more" class="button button-dark">Learn More</a>
 
     </div>
   </div>
+
+
+
+  <div class="u-padding-top-big"></div>
+
+
   <div class="u-padding-top-big"></div>
   <div class="rule-horizontal"></div>
 
@@ -193,115 +201,11 @@
   <div class="u-padding-top-big"></div>
 
   <h1>Course Modules</h1>
+  <div class="u-margin-bottom-small"></div>
 
-  <!-- Module 1: The future of leaderhsip -->
-  <?php $result = getSalescopy(59); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-  <div class="u-padding-top-big"></div>
+<?php echo render_course_modules([59, 63, 71, 74, 77, 80, 83, 86, 89]); ?>
 
 
-  <!-- Module 2 - Revealing the Ego and Its Destructive Impacts in the Workplace -->
-  <?php $result = getSalescopy(63); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-
-  <!-- Module 3 - Discovering What Lies Beyond Ego -->
-  <?php $result = getSalescopy(71); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-
-  <!-- Module 4 - Exploring the Subtleties of the Ego -->
-  <?php $result = getSalescopy(74); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-  <!-- Module 5 - Ego or Beyond Ego? You Are Always Choosing -->
-  <?php $result = getSalescopy(77); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-
-  <!-- Module 6 - Cultivating Relationships Beyond Ego -->
-  <?php $result = getSalescopy(80); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-
-  <!-- Module 7 - Leading Groups Beyond Ego -->
-  <?php $result = getSalescopy(83); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-
-  <!-- Module 8 - Anchoring Beyond Ego -->
-  <?php $result = getSalescopy(86); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
-
-  <!-- Module 9 - Integrating and Connecting to the Larger Context -->
-  <?php $result = getSalescopy(89); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['date'] ;?></p>
-      <p><?php echo $result['time'] ;?></p>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
   <div class="u-padding-top-big"></div>
 </div>
 
@@ -321,93 +225,108 @@
 <div id="section-14">
   <!-- What's included:  Nine 2-Hour Weekly Interactive Workshops  -->
   <?php $result = getSalescopy(93); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <h2><?php echo $result['headline'];?></h2>
-      <img src="<?php echo $result['image']; ?>"/>
-      <p><?php echo $result['time'] ;?></p>
-      <p><?php echo $result['content'] ;?></p>
-    </div>
-  </div>
+
+      <h2 class="center"><?php echo $result['headline'];?></h2>
+      <div class="row">
+        <div class="col-1-of-3">
+          <img class="whats-included-photo" src="<?php echo $result['image']; ?>"/>
+        </div>
+        <div class="col-2-of-3">
+          <p><?php echo $result['time'] ;?></p>
+          <p><?php echo $result['content'] ;?></p>
+        </div>
+      </div>
 
     <div class="u-margin-bottom-medium"></div>
     <div class="rule-angled"></div>
-    <div class="u-margin-bottom-medium"></div>
+    <div class="u-margin-bottom-big"></div>
 
   <!-- What's included: What's Included - Eight 90-Minute Q&A sessions  -->
   <?php $result = getSalescopy(95); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <h2><?php echo $result['headline'];?></h2>
+  <h2 class="center"><?php echo $result['headline'];?></h2>
+  <div class="row">
+    <div class="col-2-of-3">
       <p><?php echo $result['content'] ;?></p>
     </div>
-  </div>
+    <div class="col-1-of-3">
+      <img class="whats-included-photo" src="<?php echo $result['image']; ?>"/>
+    </div>
+    </div>
 
     <div class="u-margin-bottom-medium"></div>
     <div class="rule-angled"></div>
-    <div class="u-margin-bottom-medium"></div>
+    <div class="u-margin-bottom-big"></div>
 
   <!-- What's included: Nine Power Principles and Practices for Leading Beyond Ego  -->
   <?php $result = getSalescopy(160); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <h2><?php echo $result['headline'];?></h2>
+  <h2 class="center"><?php echo $result['headline'];?></h2>
+  <div class="row">
+    <div class="col-1-of-3">
+      <img class="whats-included-photo" src="<?php echo $result['image']; ?>"/>
+    </div>
+    <div class="col-2-of-3">
       <p><?php echo $result['content'] ;?></p>
     </div>
   </div>
 
     <div class="u-margin-bottom-medium"></div>
     <div class="rule-angled"></div>
-    <div class="u-margin-bottom-medium"></div>
+    <div class="u-margin-bottom-big"></div>
 
   <!-- What's included: What's Included - The Workplace Benefits of Meditation  -->
   <?php $result = getSalescopy(102); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
+    <h2 class="center"><?php echo $result['headline'];?></h2>
+    <div class="row">
+      <div class="col-2-of-3">
+        <p><?php echo $result['content'] ;?></p>
+      </div>
+      <div class="col-1-of-3">
+        <img class="whats-included-photo" src="<?php echo $result['image']; ?>"/>
+      </div>
     </div>
-  </div>
 
   <div class="u-margin-bottom-medium"></div>
   <div class="rule-angled"></div>
-  <div class="u-margin-bottom-medium"></div>
+  <div class="u-margin-bottom-big"></div>
 
 
 
   <!-- What's included: What's Included - Weekly Study / Practice Guides  -->
   <?php $result = getSalescopy(104); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
+  <h2 class="center"><?php echo $result['headline'];?></h2>
+    <div class="row">
+      <div class="col-1-of-3">
+        <img class="whats-included-photo" src="<?php echo $result['image']; ?>"/>
+      </div>
+      <div class="col-2-of-3">
+        <p><?php echo $result['content'] ;?></p>
+      </div>
     </div>
-  </div>
 
     <div class="u-margin-bottom-medium"></div>
     <div class="rule-angled"></div>
-    <div class="u-margin-bottom-medium"></div>
+    <div class="u-margin-bottom-big"></div>
 
   <!-- What's included: A Private Online Learning Portal  -->
   <?php $result = getSalescopy(106); ?>
-  <div class="copy-block__outer">
-    <div class="copy-block__inner">
-      <img src="<?php echo $result['image']; ?>"/>
-      <h2><?php echo $result['headline'];?></h2>
-      <p><?php echo $result['content'] ;?></p>
+      <h2 class="center"><?php echo $result['headline'];?></h2>
+      <div class="row">
+        <div class="col-2-of-3"><p><?php echo $result['content'] ;?></p>
+      </div>
+      <div class="col-1-of-3">
+        <img class="whats-included-photo" src="<?php echo $result['image']; ?>"/>
+      </div>
     </div>
-  </div>
+
   <div class="u-padding-top-big"></div>
 
-</div>
+
+
+</div><!-- Section 14 -->
 
 <div id="section-15">
   <div class="u-padding-top-big"></div>
-  <h1>Support</h1>
+  <h1 class="center">Support</h1>
   <div class="u-margin-bottom-medium"></div>
 
   <div class="copy-block__outer">
@@ -438,38 +357,32 @@
     <div class="col-1-of-3">
       <!-- Faculty: Members: Steve:  -->
       <?php $result = getSalescopy(110); ?>
-      <div class="copy-block__outer">
-        <div class="copy-block__inner">
-          <img style="width:20vw;" src="<?php echo $result['image']; ?>"/>
-          <h2><?php echo $result['headline'];?></h2>
+
+          <img class="faculty-image" src="<?php echo $result['image']; ?>"/>
+          <h2 class="center"><?php echo $result['headline'];?></h2>
           <p><?php echo $result['content'] ;?></p>
-        </div>
-      </div>
+
     </div>
 
     <div class="col-1-of-3">
       <!-- Faculty: Members: Barbara:  -->
       <?php $result = getSalescopy(113); ?>
-      <div class="copy-block__outer">
-        <div class="copy-block__inner">
-          <img style="width: 20vw;" src="<?php echo $result['image']; ?>"/>
-          <h2><?php echo $result['headline'];?></h2>
+
+          <img class="faculty-image" src="<?php echo $result['image']; ?>"/>
+          <h2 class="center"><?php echo $result['headline'];?></h2>
           <p><?php echo $result['content'] ;?></p>
-        </div>
-      </div>
+
     </div>
 
     <div class="col-1-of-3">
       <!-- Faculty: Members: Rod:  -->
       <?php $result = getSalescopy(116); ?>
-      <div class="copy-block__outer">
-        <div class="copy-block__inner">
-          <img style="width: 20vw;" src="<?php echo $result['image']; ?>"/>
-          <h2><?php echo $result['headline'];?></h2>
+
+          <img class="faculty-image center" src="<?php echo $result['image']; ?>"/>
+          <h2 class="center"><?php echo $result['headline'];?></h2>
           <p><?php echo $result['content'] ;?></p>
         </div>
-      </div>
-    </div>
+
   </div>
   <div class="u-padding-top-big"></div>
 </div>
@@ -482,20 +395,18 @@
   <div class="u-padding-top-big"></div>
 
   <!-- FAQ: Q & A Accordion Template -->
-  <div class="faq-accordion">
+  <div class="faq-accordion" id="faq-accordion">
     <?php echo render_questions([119, 121, 124, 137, 129, 131, 136, 138, 140]); ?>
-    <div class="u-padding-top-big"></div>
+
 
   </div>
 
 </div>
 <div class="u-margin-bottom-medium"></div>
 
-<button class="button">Learn More Now</button>
-
-</div>
-
+<a href="#learn-more" class="button button-dark" id="nav-enroll-foot">Learn More</a>
 <div class="u-padding-top-big"></div>
-
+<div class="u-margin-bottom-medium"></div>
 
 <?php get_footer(); ?>
+</div>

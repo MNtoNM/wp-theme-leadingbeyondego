@@ -7,6 +7,21 @@
 }
 
 
+@mixin xCenter {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto !important;
+}
+
+@mixin animate ( $attr, $time){
+    -webkit-transition: $attr $time ease;
+    -moz-transition: $attr $time ease;
+    -ms-transition: $attr $time ease;
+    -o-transition: $attr $time ease;
+    transition: $attr $time ease;
+}
+
 // @mixin clipBottom($lift) {
 //   -webkit-clip-path: polygon(0 0, 100% 0, 100% {$lift}, 0% 100%);
 //   clip-path: polygon(0 0, 100% 0, 100% {$lift}, 0% 100%);
@@ -38,11 +53,11 @@ Good order to follow when making a site responsive:
 ORDER: Base + typography > general layout (header, footer, etc), + grid > page layout > components
 */
 
-
+// -- ORIGINAL BREAKPOINTS -->
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 27.5em) { @content }; // 600 px divided by 16 (px)
-     // use ems for media queries. 1em = page default font size (usually 16px)
+    @media (max-width: 37.5em) { @content }; // 600 px divided by 16 (px)
+    // use ems for media queries. 1em = page default font size (usually 16px)
   }
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) { @content }; // 900px
@@ -50,7 +65,7 @@ ORDER: Base + typography > general layout (header, footer, etc), + grid > page l
   @if $breakpoint == tab-land {
     @media (max-width: 75em) { @content }; // 1200px
   }
-  @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) { @content }; // 1800px
-  }
+  // @if $breakpoint == big-desktop {
+  //   @media (min-width: 112.5em) { @content }; // 1800px
+  // }
 }

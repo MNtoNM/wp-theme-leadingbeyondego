@@ -1,8 +1,10 @@
       <div class="footer">
-        <div class="row">
-          <div class="col-1-of-4"><a href="#">Contact Us</a></div>
-          <div class="col-2-of-4">© 2018 Leading Beyond Ego, LLC. All Rights Reserved.</div>
-          <div class="col-1-of-4"><a href="#">Privacy Policy</a></div>
+        <div class="row center">
+          <span>© 2018 Leading Beyond Ego, LLC. All Rights Reserved.</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="mailto:support@leadingbeyondego.com">Contact Us</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="privacy-policy">Privacy Policy</a>
         </div>
       </div>
 

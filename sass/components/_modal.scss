@@ -1,0 +1,70 @@
+.modal-container {
+  color: $color-white !important;
+  position: fixed;
+  background-color: #fff;
+  width: 90vw;
+  height: 70vh;
+  left: 50%;
+  padding-top: 4rem;
+  border-radius: 2px;
+
+  -webkit-transform: translate(-50%,-200%);
+  -ms-transform: translate(-50%,-200%);
+  transform: translate(-50%,-200%);
+
+  transition: transform 320ms ease-out;
+
+  .mc4wp-form-fields {
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    // display: table;
+  }
+
+  input {
+    // width: 50%;
+    // height: 3rem;
+    padding-left: 1rem;
+  }
+}
+
+.form-field {
+  height: 3rem;
+}
+
+.modal-close {
+  color: $color-white;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  text-decoration: none;
+  font-size: 4rem;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.modal:before {
+  content: "";
+  position: fixed;
+  display: none;
+  background-color: rgba(0,0,0,.8);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.modal:target:before {
+  display: block;
+  z-index: 10;
+}
+
+.modal:target .modal-container {
+    top: 20%;
+    z-index: 20;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}

@@ -27,7 +27,7 @@ h3, section-1__pullquote {
   color: $color-white;
   font-family: $default-font-family;
   // @include absCenter;
-  padding-top: 11rem;
+  padding-top: 8rem;
   margin-bottom: 5rem;
   text-align: center;
   line-height: 1.4;
@@ -59,16 +59,30 @@ h6 {
 
 }
 
+p {
+  padding-bottom: 3rem;
+}
+
 p, li {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.8;
   font-size: 1.8rem;
   color: #042b2d;
   word-spacing: 0.2em;
+  // list-style-type: circle;
+  list-style-type: disc !important;
+
 }
 
-li {
-  list-style-type: circle;
+// li:before {
+//   content: '\00b7';
+//   font-size: 75px;
+//   line-height: 24px;
+//   vertical-align: top;
+// }
+
+li:last-child {
+   margin-bottom: 2rem;
 }
 
 .copy-block__inner li {
@@ -88,8 +102,44 @@ li {
     transform: translateX(5%);
     max-width: 70rem;
     margin: 0 auto;
+    // @include respond(phone) {
+    //   width: 70rem;
+    // }
   }
   &__inner {
     text-align: left;
+    @include respond(phone) {
+      padding-right: 8vw;
+    }
+    @include respond(tab-port) {
+      padding-right: 8vw;
+    }
   }
+}
+
+.faculty-font-size, .p--faculty {
+  font-size: 1.5rem;
+  // background-color: orangered;
+}
+
+ul li {
+  margin-left: 3rem;
+  list-style-type: circle;
+}
+
+
+// -- Metadata for salespage course meta info (date time, etc)  --
+.module-meta {
+  @include respond(tab-port) {
+    margin-top: -9rem;
+  }
+  position: relative;
+  left: 50%;
+  top: 4rem;
+  padding-bottom: 4rem;
+  // @include respond(tab-port) {
+  //   margin: 0 auto;
+  //   transform: translateX(-15%);
+  // }
+  transform: translateX(-50%);
 }

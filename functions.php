@@ -32,3 +32,5 @@ require get_template_directory() . '/includes/function-cpt-salescopy.php';
 require get_template_directory() . '/includes/function-get-salescopy.php';
 
 require get_template_directory() . '/includes/function-render-faq-item.php';
+
+require get_template_directory() . '/includes/function-render-course-module.php';
