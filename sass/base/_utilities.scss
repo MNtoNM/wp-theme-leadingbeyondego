@@ -52,3 +52,14 @@
 	background: transparent;
   width: 100%;
 }
+
+.module-pullup {
+  @include respond(tab-land) {
+    margin-bottom: -5rem;
+  }
+  // position: relative;
+  // z-index: 10;
+  // display: block;
+  // text-indent: 3rem;
+  // overflow: hidden;
+}

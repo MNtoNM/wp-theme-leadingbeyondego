@@ -15,7 +15,6 @@
     <h5 class="center white">with Steve Motenko, Barbara J Hunt and Rodney Dueck</h5>
     <h6 class="center white u-margin-bottom-medium">Presented by Leading Beyond Ego LLC</h6>
     <div>
-      <h5 class="center white">Registration is now closed. </h5>
       <div class="u-margin-bottom-medium"></div>
       <img src="<?php echo $result['image']; ?>"/>
 
@@ -396,7 +395,7 @@
 
   <!-- FAQ: Q & A Accordion Template -->
   <div class="faq-accordion" id="faq-accordion">
-    <?php echo render_questions([119, 121, 124, 137, 129, 131, 136, 138, 140]); ?>
+    <?php echo render_questions([119, 121, 124, 136, 129, 131, 138, 140]); ?>
 
 
   </div>

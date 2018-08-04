@@ -203,6 +203,10 @@ ul li {
   background: transparent;
   width: 100%; }
 
+@media (max-width: 75em) {
+  .module-pullup {
+    margin-bottom: -5rem; } }
+
 .button {
   color: #fff;
   border-radius: 3px;
