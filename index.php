@@ -99,6 +99,17 @@
   <div id="section-6">
     <div class="u-padding-top-big"></div>
 
+
+    <!-- Testimonials (Might be moved later) -->
+    <?php $result = getSalescopy(284); ?>
+    <div class="copy-block__outer">
+      <div class="copy-block__inner">
+        <h2><?php echo $result['headline'];?></h2>
+        <p><?php echo $result['content'] ;?></p>
+      </div>
+    </div>
+    <div class="u-padding-top-big"></div>
+
     <!-- Who is this course for? -->
     <div class="u-margin-bottom-medium"></div>
     <?php $result = getSalescopy(49); ?>
