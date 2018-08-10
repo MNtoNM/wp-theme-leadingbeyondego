@@ -696,6 +696,13 @@ h1 {
   color: #2AA0A6;
   font-size: 8rem; }
 
+.section-testimonials {
+  color: #042B2D;
+  background: url("images/backgrounds/soft_wallpaper.png");
+  position: relative;
+  padding-top: 10rem;
+  margin-bottom: 10rem; }
+
 .container {
   width: 95vw;
   margin: 0 auto; }

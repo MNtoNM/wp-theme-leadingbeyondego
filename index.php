@@ -97,18 +97,19 @@
   <div class="parallax-window-min-40" data-parallax="scroll" data-image-src="<?php echo wp_get_attachment_image_src('172', 'full')[0] ?>" data-speed="0.5"></div>
 
   <div id="section-6">
-    <div class="u-padding-top-big"></div>
-
+    <!-- <div class="u-padding-top-big"></div> -->
 
     <!-- Testimonials (Might be moved later) -->
-    <?php $result = getSalescopy(284); ?>
-    <div class="copy-block__outer">
-      <div class="copy-block__inner">
-        <h2><?php echo $result['headline'];?></h2>
-        <p><?php echo $result['content'] ;?></p>
+    <div class="section-testimonials">
+      <?php $result = getSalescopy(284); ?>
+      <div class="copy-block__outer">
+        <div class="copy-block__inner">
+          <h2><?php echo $result['headline'];?></h2>
+          <p><?php echo $result['content'] ;?></p>
+        </div>
       </div>
-    </div>
-    <div class="u-padding-top-big"></div>
+      <div class="u-padding-top-big"></div>
+    </div><!-- .section-testimonials -->
 
     <!-- Who is this course for? -->
     <div class="u-margin-bottom-medium"></div>
